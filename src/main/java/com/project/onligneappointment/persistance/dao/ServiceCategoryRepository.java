@@ -5,4 +5,7 @@ import com.project.onligneappointment.service.interfaces.IServiceCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ServiceCategoryRepository extends JpaRepository<ServiceCategory, Long> {
+    ServiceCategory saveServiceCategory(ServiceCategory serviceCategory);
+    ServiceCategory updateServiceCategory(ServiceCategory serviceCategory);
+    boolean deleteServiceCategory(Long id);
 }
