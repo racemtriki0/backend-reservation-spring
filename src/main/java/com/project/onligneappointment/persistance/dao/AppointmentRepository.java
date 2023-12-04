@@ -11,10 +11,10 @@ import java.util.List;
 
 public interface AppointmentRepository extends JpaRepository<Appointment, Long> {
 
-    Appointment saveAppointment(Appointment appointment);
-    Appointment updateAppointment(Appointment appointment);
-    boolean deleteAppointment(Long id);
-    List<Appointment> getListAppointement(User user);
+    /*Appointment create(Appointment appointment);
+    Appointment update(Appointment appointment);
+    boolean delete(Long id);*/
+    //List<Appointment> getListAppointement(User user);
     Appointment findById(int id);
 
     @Query(value = "select count(*) from appointment",nativeQuery = true)

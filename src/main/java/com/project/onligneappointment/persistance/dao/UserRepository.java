@@ -8,7 +8,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     User saveUser(User user);
     User updateUser(User user);
     boolean deleteUser(Long id);
-    User validateUser(String email, String password);
+    //User validateUser(String email, String password);
     User findByEmailAndPassword(String email, String password);
 
     Integer getCountByEmail(String email);

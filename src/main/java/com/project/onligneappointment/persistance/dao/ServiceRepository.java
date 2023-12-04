@@ -11,10 +11,10 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface ServiceRepository extends JpaRepository<Service, Long> {
-    Service saveService(Service service);
-    Service updateService(Service service);
-    boolean deleteService(Long id);
-    List<Service> getListService(Provider provider);
+    Service save(Service service);
+    Service update(Service service);
+    boolean delete(Long id);
+    List<Service> getList(Provider provider);
     Service findById(long id);
 
     @Query(value = "select count(*) from service",nativeQuery = true)

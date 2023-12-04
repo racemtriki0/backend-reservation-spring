@@ -20,6 +20,7 @@ public class Appointment implements Serializable {
     private int status;
 
     @ManyToOne
+    @JoinColumn(name = "user_id")
     private User client;
 
     @ManyToOne
