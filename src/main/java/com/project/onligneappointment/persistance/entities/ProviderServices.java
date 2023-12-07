@@ -2,23 +2,23 @@ package com.project.onligneappointment.persistance.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serializable;
 @Entity
+@Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@IdClass(ProviderServicesId.class)
+/*@IdClass(ProviderServicesId.class)*/
 public class ProviderServices implements Serializable {
-
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Id
+    private String note;
     @ManyToOne
-    @JoinColumn(name = "provider_id")
     private Provider provider;
 
-    @Id
     @ManyToOne
-    @JoinColumn(name = "service_id")
-    private Service service;
+    private Services services;
 }

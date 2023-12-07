@@ -13,7 +13,7 @@ public class AppointmentService implements IAppointment {
     @Autowired
     private AppointmentRepository appointmentRepository;
     @Override
-    public Appointment saveAppointmentEntity(Appointment appointment) {
+    public Appointment saveAppointment(Appointment appointment) {
         return appointmentRepository.save(appointment);
     }
 
@@ -28,10 +28,10 @@ public class AppointmentService implements IAppointment {
         return true;
     }
 
-    /*@Override
-    public List<Appointment> getListAppointement(User user) {
-        return appointmentRepository.getListAppointement(user);
-    }*/
+    @Override
+    public List<Appointment> getListAppointement() {
+        return appointmentRepository.findAll();
+    }
 
     @Override
     public Appointment findById(Long id) {

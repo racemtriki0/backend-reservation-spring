@@ -1,5 +1,6 @@
 package com.project.onligneappointment.persistance.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,17 +10,17 @@ import lombok.Setter;
 import java.io.Serializable;
 import java.util.List;
 @Entity
+@Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Role")
 public class Role implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
-
+    private Long id;
     private String libelle;
-    @OneToMany(mappedBy = "role")
+    @JsonIgnore
+    @OneToMany(mappedBy="role",fetch=FetchType.LAZY)
     private List<Provider> providers;
 
 

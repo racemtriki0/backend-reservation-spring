@@ -6,10 +6,10 @@ import com.project.onligneappointment.persistance.entities.User;
 import java.util.List;
 
 public interface IAppointment {
-    Appointment saveAppointmentEntity(Appointment appointment);
+    Appointment saveAppointment(Appointment appointment);
     Appointment updateAppointment(Appointment appointment);
     boolean deleteAppointment(Long id);
-    /*List<Appointment> getListAppointement(User user);*/
+    List<Appointment> getListAppointement();
     Appointment findById(Long id);
 
     int getQuantityOfAppointment();

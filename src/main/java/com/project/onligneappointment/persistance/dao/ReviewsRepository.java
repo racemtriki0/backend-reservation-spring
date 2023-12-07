@@ -10,11 +10,6 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface ReviewsRepository extends JpaRepository<Reviews, Long> {
-    Reviews save(Reviews reviews);
-    Reviews update(Reviews reviews);
-    boolean delete(Long id);
-    List<Reviews> getList();
-    Reviews findById(long id);
 
     @Query(value = "select count(*) from reviews",nativeQuery = true)
     int getQuantityOfReviews();

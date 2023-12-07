@@ -9,5 +9,6 @@ public interface IProviderAvailability {
     ProviderAvailability saveProviderAvailability(ProviderAvailability availability);
     ProviderAvailability updateProviderAvailability(ProviderAvailability availability);
     boolean deleteProviderAvailability(Long id);
+    List<ProviderAvailability> getList();
 
 }

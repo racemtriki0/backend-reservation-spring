@@ -4,7 +4,11 @@ import com.project.onligneappointment.persistance.dao.ProviderAvailabilityReposi
 import com.project.onligneappointment.persistance.entities.ProviderAvailability;
 import com.project.onligneappointment.service.interfaces.IProviderAvailability;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import java.util.List;
+
+@Service
 public class ProviderAvailabilityService implements IProviderAvailability {
     @Autowired
     public ProviderAvailabilityRepository providerAvailabilityRepository;
@@ -22,5 +26,10 @@ public class ProviderAvailabilityService implements IProviderAvailability {
     public boolean deleteProviderAvailability(Long id) {
         providerAvailabilityRepository.deleteById(id);
         return true;
+    }
+
+    @Override
+    public List<ProviderAvailability> getList() {
+        return providerAvailabilityRepository.findAll();
     }
 }
