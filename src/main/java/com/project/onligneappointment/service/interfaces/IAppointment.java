@@ -9,7 +9,7 @@ public interface IAppointment {
     Appointment saveAppointment(Appointment appointment);
     Appointment updateAppointment(Appointment appointment);
     boolean deleteAppointment(Long id);
-    List<Appointment> getListAppointement(User user);
+    List<Appointment> getListAppointement();
     Appointment findById(Long id);
 
     int getQuantityOfAppointment();
