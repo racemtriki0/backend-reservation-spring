@@ -4,11 +4,13 @@ import com.project.onligneappointment.persistance.dao.AppointmentRepository;
 import com.project.onligneappointment.persistance.entities.Appointment;
 import com.project.onligneappointment.persistance.entities.User;
 import com.project.onligneappointment.service.interfaces.IAppointment;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
+@Transactional
 public class AppointmentService implements IAppointment {
     @Autowired
     private AppointmentRepository appointmentRepository;

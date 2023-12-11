@@ -3,12 +3,14 @@ package com.project.onligneappointment.service.implementations;
 import com.project.onligneappointment.persistance.dao.RoleRepository;
 import com.project.onligneappointment.persistance.entities.Role;
 import com.project.onligneappointment.service.interfaces.IRole;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class RoleService implements IRole {
     @Autowired
     RoleRepository roleRepository;

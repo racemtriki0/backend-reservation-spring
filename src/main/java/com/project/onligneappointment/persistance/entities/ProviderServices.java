@@ -16,9 +16,9 @@ public class ProviderServices implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String note;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Provider provider;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Services services;
 }

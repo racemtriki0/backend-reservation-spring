@@ -18,7 +18,7 @@ public class ProviderAvailability implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Provider provider;
 
     private String day_of_week;

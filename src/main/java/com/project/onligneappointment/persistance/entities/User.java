@@ -23,11 +23,15 @@ public class User implements Serializable {
     private String password;
     @OneToOne(cascade = CascadeType.ALL)
     private Provider provider;
-    @ManyToOne
+
+    @ManyToOne(cascade = CascadeType.ALL)
     private Role role;
     @JsonIgnore
     @OneToMany(mappedBy="client",fetch=FetchType.LAZY)
     private List<Appointment> appointments;
+    @JsonIgnore
+    @OneToMany(mappedBy="client",fetch=FetchType.LAZY, cascade = CascadeType.PERSIST)
+    private List<Reviews> reviews;
 
 
 }

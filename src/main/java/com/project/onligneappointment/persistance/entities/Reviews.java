@@ -18,7 +18,7 @@ public class Reviews implements Serializable {
     private Long id;
     private String date;
     private String commentaire;
-    @OneToOne
+    @ManyToOne/*(cascade = CascadeType.ALL)*/
     private User client;
 
     @ManyToOne
