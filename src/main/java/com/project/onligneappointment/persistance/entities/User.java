@@ -21,6 +21,10 @@ public class User implements Serializable {
     private String email;
     private String address;
     private String password;
+    @OneToOne
+    private Provider provider;
+    @ManyToOne
+    private Role role;
     @JsonIgnore
     @OneToMany(mappedBy="client",fetch=FetchType.LAZY)
     private List<Appointment> appointments;

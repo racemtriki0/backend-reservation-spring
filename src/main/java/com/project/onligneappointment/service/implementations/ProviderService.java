@@ -33,8 +33,8 @@ public class ProviderService implements IProvider {
         return providerRepository.findAll();
     }
 
-    @Override
+    /*@Override
     public Provider validateProvider(String email, String password) {
         return providerRepository.findByEmailAndPassword(email,password);
-    }
+    }*/
 }

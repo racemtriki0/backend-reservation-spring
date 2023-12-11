@@ -18,17 +18,10 @@ public class Provider implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String lastname;
-    private String email;
-    private String address;
-    private String password;
     private String company_name;
     private String service_description;
     private String localisation;
     private String other_info;
-    @ManyToOne
-    private Role role;
     @JsonIgnore
     @OneToMany(mappedBy="provider",fetch=FetchType.LAZY)
     private List<Appointment> appointments;

@@ -9,6 +9,6 @@ public interface IProvider {
     Provider updateProvider(Provider provider);
     boolean deleteProvider(Long id);
     List<Provider> getListProvider();
-    Provider validateProvider(String email, String password);
+    //Provider validateProvider(String email, String password);
 
 }
