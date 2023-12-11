@@ -10,6 +10,6 @@ public interface ProviderRepository extends JpaRepository<Provider, Long> {
     int getQuantityOfProvider();
     //Provider validateProvider(String email, String password);
 
-    Provider findByEmailAndPassword(String email, String password);
+    //Provider findByEmailAndPassword(String email, String password);
 
 }

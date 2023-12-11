@@ -21,7 +21,7 @@ public class Role implements Serializable {
     private String libelle;
     @JsonIgnore
     @OneToMany(mappedBy="role",fetch=FetchType.LAZY)
-    private List<Provider> providers;
+    private List<User> users;
 
 
 }

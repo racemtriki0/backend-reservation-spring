@@ -35,12 +35,12 @@ public class ProviderController {
     List<Provider> getListProvider(){
         return providerservice.getListProvider();
     }
-    @PostMapping(value = "/validate", consumes = "application/json", produces = "application/json")
+    /*@PostMapping(value = "/validate", consumes = "application/json", produces = "application/json")
     @ResponseBody
     public Provider validateProvider(@RequestBody Map<String, String> requestPayload) {
         String email = requestPayload.get("email");
         String password = requestPayload.get("password");
         return providerservice.validateProvider(email, password);
-    }
+    }*/
 
 }
