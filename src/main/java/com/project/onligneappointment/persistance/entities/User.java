@@ -24,7 +24,7 @@ public class User implements Serializable {
     @OneToOne(cascade = CascadeType.ALL)
     private Provider provider;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne/*(cascade = CascadeType.ALL)*/
     private Role role;
     @JsonIgnore
     @OneToMany(mappedBy="client",fetch=FetchType.LAZY)
