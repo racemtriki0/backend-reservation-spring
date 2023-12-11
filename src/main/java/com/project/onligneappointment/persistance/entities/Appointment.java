@@ -22,10 +22,10 @@ public class Appointment implements Serializable {
 
     private int status;
 
-    @ManyToOne
+    @ManyToOne/*(cascade = CascadeType.ALL)*/
     private User client;
 
-    @ManyToOne
+    @ManyToOne/*(cascade = CascadeType.ALL)*/
     private Provider provider;
 
 

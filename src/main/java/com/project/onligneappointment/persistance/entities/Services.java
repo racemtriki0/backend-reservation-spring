@@ -25,6 +25,6 @@ public class Services implements Serializable {
     @JsonIgnore
     @OneToMany(mappedBy="services",fetch=FetchType.LAZY)
     private List<ProviderServices> providerServices;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private ServiceCategory serviceCategory;
 }
