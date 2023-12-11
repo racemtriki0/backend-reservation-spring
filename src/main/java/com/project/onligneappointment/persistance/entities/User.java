@@ -21,7 +21,7 @@ public class User implements Serializable {
     private String email;
     private String address;
     private String password;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Provider provider;
     @ManyToOne
     private Role role;
